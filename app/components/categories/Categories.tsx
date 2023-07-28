@@ -16,7 +16,6 @@ const Categories = () => {
     try {
       const data = await client.fetch('*[_type == "categories"]')
       setData(data)
-      console.log(data)
     } catch (error) {
       console.log(error)
     }
