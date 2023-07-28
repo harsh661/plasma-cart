@@ -1,9 +1,9 @@
 import './assets/globals.css'
 import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 
-const font = Raleway({ subsets: ['latin'] })
+const font = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'PlasmaCart',

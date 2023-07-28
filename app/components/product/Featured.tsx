@@ -16,7 +16,6 @@ const Featured = () => {
     try {
       const data = await client.fetch('*[_type == "product"]')
       setData(data)
-      console.log(data)
     } catch (error) {
       console.log(error)
     }
