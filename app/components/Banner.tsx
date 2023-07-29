@@ -45,7 +45,7 @@ const Banner: React.FC<BannerProps> = ({ isHero }) => {
           />
 
           <div className="bg-black/50 absolute inset-0 flex flex-col gap-5 items-center justify-center p-2 lg:p-10">
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-center text-white max-w-3xl">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center text-white max-w-3xl">
               {bannerData.largeText1}
             </h2>
 
@@ -63,9 +63,10 @@ const Banner: React.FC<BannerProps> = ({ isHero }) => {
           />
           <div className="flex flex-col gap-3 text-white px-5">
             <div className="font-bold text-5xl">{bannerData.discount} <span className="text-lg text-gray">off</span></div>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-center max-w-3xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold max-w-3xl">
               {bannerData.largeText2}
             </h2>
+            <Button label={bannerData.buttonText} action={()=>{}}/>
           </div>
         </div>
       )}

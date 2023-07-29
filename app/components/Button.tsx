@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
     action,
 }) => {
   return (
-    <div className="cursor-pointer py-2 px-4 rounded-md bg-white text-black text-sm lg:text-base flex items-center gap-2 font-medium">
+    <div className="cursor-pointer py-2 px-4 rounded-md bg-white text-black text-sm lg:text-base flex items-center gap-2 font-medium w-max">
         {label}
         <HiMiniArrowSmallRight size={20}/>
     </div>
