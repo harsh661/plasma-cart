@@ -4,7 +4,7 @@ import Featured from './components/product/Featured';
 
 export default function Home() {
   return (
-    <div className='px-5 lg:px-10 max-w-[1400px] mx-auto'>
+    <div className='w-full px-5 lg:px-10 max-w-[1400px] mx-auto'>
       <Banner isHero/>
       <Categories />
       <Featured />

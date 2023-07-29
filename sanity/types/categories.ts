@@ -25,6 +25,11 @@ export default {
                 source: 'name',
                 maxLength: '100'
             }
+        },
+        {
+            name: 'banner',
+            title: 'Banner',
+            type: 'image'
         }
     ]
 }
