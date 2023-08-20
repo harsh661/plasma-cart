@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import ProductCard from "./ProductCard"
 import Heading from "../Heading"
 import Grid from "../Grid"
+import Loading from "../Loading"
 
 const Featured = () => {
   const [data, setData] = useState([])
@@ -14,23 +15,27 @@ const Featured = () => {
 
   const getData = async () => {
     try {
-      const data = await client.fetch('*[_type == "product" && isFeatured == true]')
+      const data = await client.fetch(
+        '*[_type == "product" && isFeatured == true]'
+      )
       setData(data)
     } catch (error) {
       console.log(error)
     }
   }
 
-  if (!data) return
-
   return (
     <div className="flex flex-col py-5">
       <Heading title="Featured Products" />
-      <Grid>
-        {data.map((item: any) => (
-          <ProductCard key={item._id} data={...item} />
-        ))}
-      </Grid>
+      {data.length > 0 ? (
+        <Grid>
+          {data.map((item: any) => (
+            <ProductCard key={item._id} data={...item} />
+          ))}
+        </Grid>
+      ) : (
+        <Loading details/>
+      )}
     </div>
   )
 }
