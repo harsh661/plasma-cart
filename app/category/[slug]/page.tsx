@@ -10,6 +10,7 @@ const page = () => {
   const params = useParams()
   const [data, setData] = useState([])
   const [categoryData, setCategoryData] = useState<any>({})
+  
   useEffect(() => {
     getData()
   }, [params.slug])

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Grid from "../Grid"
 import Heading from "../Heading"
 import CategoryCard from "./CategoryCard"
+import Loading from "../Loading"
 
 const Categories = () => {
   const [data, setData] = useState([])
@@ -21,15 +22,18 @@ const Categories = () => {
     }
   }
 
-  if (!data) return null
   return (
     <div className="flex flex-col py-5">
         <Heading title="Discover Categories" />
+        {data.length > 0 ? (
         <Grid>
             {data.map((item: any) => (
                 <CategoryCard key={item._id} data={...item}/>
             ))}
         </Grid>
+        ) : (
+          <Loading />
+        )}
     </div>
 )
 }
