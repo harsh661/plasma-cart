@@ -23,7 +23,7 @@ const Categories = () => {
   }
 
   return (
-    <div className="flex flex-col py-5">
+    <div className="flex flex-col py-5 px-5 lg:px-0">
         <Heading title="Discover Categories" />
         {data.length > 0 ? (
         <Grid>

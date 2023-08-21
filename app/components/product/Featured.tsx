@@ -25,7 +25,7 @@ const Featured = () => {
   }
 
   return (
-    <div className="flex flex-col py-5">
+    <div className="flex flex-col py-5 px-5 lg:px-0">
       <Heading title="Featured Products" />
       {data.length > 0 ? (
         <Grid>

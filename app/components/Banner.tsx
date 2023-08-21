@@ -27,7 +27,7 @@ const Banner: React.FC<BannerProps> = ({ isHero }) => {
   if (!bannerData)
     return (
       <div
-        className={`w-full h-60 md:h-64 lg:h-80 xl:h-96 bg-light-gray rounded-lg overflow-hidden relative animate-pulse ${
+        className={`w-full h-60 md:h-64 lg:h-80 xl:h-96 bg-light-gray lg:rounded-lg overflow-hidden relative animate-pulse ${
           !isHero && "h--40 md:h-48 lg:h-56 xl:h-60"
         }`}
       />
@@ -37,7 +37,7 @@ const Banner: React.FC<BannerProps> = ({ isHero }) => {
     <>
       {isHero ? (
         <div
-          className={`w-full h-60 md:h-64 lg:h-80 xl:h-96 bg-light-gray rounded-lg overflow-hidden relative`}
+          className={`w-full h-60 md:h-64 lg:h-80 xl:h-96 bg-light-gray lg:rounded-lg overflow-hidden relative`}
         >
           <img
             src={urlOf(bannerData.image).url()}
@@ -54,14 +54,14 @@ const Banner: React.FC<BannerProps> = ({ isHero }) => {
         </div>
       ) : (
         <div
-          className={`flex items-center w-full h-40 md:h-48 lg:h-56 xl:h-60 bg-black rounded-lg overflow-hidden`}
+          className={`flex items-center w-full max-h-60 bg-black lg:rounded-lg overflow-hidden`}
         >
           <img
             src={urlOf(bannerData.saleImage).url()}
             alt=""
-            className="hidden md:block h-full w-auto"
+            className="hidden md:block h-full w-[40%]"
           />
-          <div className="flex flex-col gap-3 text-white px-5">
+          <div className="flex flex-col gap-3 text-white px-5 py-3">
             <div className="font-bold text-5xl">{bannerData.discount} <span className="text-lg text-gray">off</span></div>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold max-w-3xl">
               {bannerData.largeText2}
