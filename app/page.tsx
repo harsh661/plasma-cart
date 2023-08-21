@@ -1,4 +1,5 @@
 import Banner from './components/Banner';
+import { Footer } from './components/Footer';
 import Categories from './components/categories/Categories';
 import Featured from './components/product/Featured';
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Categories />
       <Featured />
       <Banner />
+      <Footer />
     </div>
   )
 }
