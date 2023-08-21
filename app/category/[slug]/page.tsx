@@ -28,7 +28,7 @@ const page = () => {
     }
   }
 
-  if (!data || !categoryData.banner) return null
+  if (!data || !categoryData.banner) return <h1>Loading</h1>
 
   return (
     <div className="h-full px-5 lg:px-10 max-w-[1400px] mx-auto">
@@ -42,9 +42,9 @@ const page = () => {
         </div>
       </div>
       <Heading title={`Discover ${params.slug}`} />
-      <div className="flex gap-5 flex-wrap">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
         {data.map((item: any) => (
-          <ProductCard key={item._id} data={...item} />
+          <ProductCard key={item._id} data={...item} notFixed/>
         ))}
       </div>
     </div>
