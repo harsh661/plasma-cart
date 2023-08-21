@@ -50,7 +50,7 @@ const page = () => {
               <div className="text-2xl font-medium">₹{itemData.price}</div>
             </div>
             <Counter />
-            <div className="flex gap-10">
+            <div className="flex flex-col md:flex-row gap-5 md: gap-10">
               <InputButton fill label="Buy Now" onClick={() => {}} />
               <InputButton label="Add to Cart" onClick={() => {}} />
             </div>
